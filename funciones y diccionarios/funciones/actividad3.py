@@ -10,4 +10,6 @@ def actividad(x, y):
 # Solicita al usuario que ingrese el valor de x y el valor de y, y llama a la función 'actividad'
 x = int(input("Inserte el valor de X: "))
 y = int(input("Inserte el valor de Y: "))
+
+#Llamamos la función
 actividad(x, y)

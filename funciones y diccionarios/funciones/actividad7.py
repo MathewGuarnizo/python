@@ -1,4 +1,4 @@
-# Definición de una función llamada 'lista' que toma dos argumentos, dia y semana con un valor predeterminado de una lista vacía.
+# Definición de una función llamada lista que toma dos argumentos, dia y semana con un valor predeterminado de una lista vacía.
 def lista(dia, semana=[]):
     
     # Agrega el valor dia a la lista semana.
