@@ -1,22 +1,22 @@
 # Definición de la clase Votante
 class Votante:
     def __init__(self, id, nombre):
-        # Constructor de la clase Votante.
+        # Constructor de la clase Votante
         self.id = id
         self.nombre = nombre
         self.voto = None  # Almacena el voto del votante
 
-# Definición de la clase Candidato
+# Definicion de la clase Candidato
 class Candidato:
     def __init__(self, nombre):
-        # Constructor de la clase Candidato.
+        # Constructor de la clase Candidato
         self.nombre = nombre
         self.votos = 0  # Contador de votos recibidos por el candidato
 
-# Definición de la clase SistemaVotacion
+# Definicion de la clase SistemaVotacion
 class SistemaVotacion:
     def __init__(self, candidatos):
-        # Constructor de la clase SistemaVotacion.
+        # Constructor de la clase SistemaVotacion
         self.votantes = []  # Lista de votantes registrados
         self.candidatos = candidatos  # Lista de candidatos disponibles
 
@@ -27,7 +27,7 @@ class SistemaVotacion:
         print(f"Votante {nombre} registrado con éxito.")
 
     def ingresarSistema(self, id):
-        # Permite que un votante registrado ingrese al sistema de votación.
+        # Permite que un votante registrado ingrese al sistema de votacion
         votante = self.buscarVotantePorId(id)
         if votante:
             print(f"Bienvenido, {votante.nombre}.")
@@ -36,7 +36,7 @@ class SistemaVotacion:
             print("Votante no encontrado.")
 
     def menuVotacion(self, votante):
-        # Despliega el menú de votación para un votante.
+        # Aqui hacemos el menu para que el votante escoja si votar c¿por alguien o en blanco
         while True:
             print("\n--- Menu de Votacion ---")
             print("1. Votar por Candidato")
@@ -57,7 +57,7 @@ class SistemaVotacion:
                 print("Opcion no valida, intentelo de nuevo")
 
     def votar(self, id, candidato):
-        # Registra el voto de un votante por un candidato.
+        # Registra el voto de un votante por un candidato
         votante = self.buscarVotantePorId(id)
         if votante and not votante.voto:
             candidatoEncontrado = next((c for c in self.candidatos if c.nombre == candidato), None)
@@ -73,7 +73,7 @@ class SistemaVotacion:
             print("Este votante ya realizo su voto respectivo")
 
     def votarEnBlanco(self, id):
-        # Registra el voto en blanco de un votante.
+        # Registra el voto en blanco de un votante
         votante = self.buscarVotantePorId(id)
         if votante and not votante.voto:
             print("Voto en blanco se a realizado con exito")
@@ -82,7 +82,6 @@ class SistemaVotacion:
             print("Votante no se a encontrado")
         else:
             print("Este votante ya reliazo su voto respectivo")
-
 
     def mostrarCandidatos(self):
         # este metodo nos ayuda a imprimir la lista de candidatos disponibles para votar
@@ -104,7 +103,7 @@ candidatos = [candidato1, candidato2, candidato3]
 # aqi creamos el sistema de votacion
 sistemaVotacion = SistemaVotacion(candidatos)
 
-# Aqui tenemos el menu principal
+# Aqui tenemos el menu principal del programa
 while True:
     print("\n--- Menu Principal ---")
     print("1. Registrar Votante")
@@ -112,7 +111,7 @@ while True:
     print("3. Terminar Votación")
     print("4. Salir")
 
-    opcion = int(input("Ingrese su opción: "))
+    opcion = int(input("Ingrese una opcion: "))
 
     if opcion == 1:
         id = int(input("Ingrese el ID del votante: "))
